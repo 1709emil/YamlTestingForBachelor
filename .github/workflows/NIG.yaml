@@ -1,0 +1,15 @@
+name: CI
+on:
+  push:
+  - main
+  pullRequest:
+  - main
+jobs:
+  build:
+    name: Say Hello
+    runsOn: ubuntu-latest
+    steps:
+    - name: Checkout (optional for empty repo)
+      uses: actions/checkout@v4
+    - name: Say hi
+      run: echo "Hello from GitHub Actions!"
