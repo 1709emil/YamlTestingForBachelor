@@ -2,12 +2,12 @@ name: CI
 on:
   push:
   - main
-  pullRequest:
+  pull_requests:
   - main
 jobs:
   build:
     name: Say Hello
-    runsOn: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout (optional for empty repo)
       uses: actions/checkout@v4
